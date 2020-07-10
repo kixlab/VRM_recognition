@@ -1,0 +1,15 @@
+num_tag = 12
+embedding_len=300
+pos_len=45
+sent_len= 36
+hidden_dim_word = 128
+hidden_dim_pos = 32
+hidden_dim_dec =128
+hidden_dim_att = 16
+chunk_size = 8
+max_dialogue_len = 540
+degrade_factor = 0.0/chunk_size
+dropout_rate=0.0
+num_layers= 1
+weights = [ (1.0 - (chunk_size-i-1)*degrade_factor) for i in range(chunk_size)] #[0.7,0.8,0.9,1.0]
+by_conversation = False
