@@ -16,8 +16,8 @@ from src import vrm_config
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
-client_id = "weakpgxzdv" ## enter your id 
-client_secret = "ulPCfr9ijpZ9zYOWsKpZS14YcF7zqv5zeOldvDs1" ## enter your key
+client_id = "" ## enter your id 
+client_secret = "" ## enter your key
 
 pos_map = {'LS': 0, 'TO': 1, 'VBN': 2, "''": 3, 'WP': 4, 'UH': 5, 'VBG': 6, 'JJ': 7, 'VBZ': 8, '--': 9,
     'VBP': 10, 'NN': 11, 'DT': 12, 'PRP': 13, ':': 14, 'WP$': 15, 'NNPS': 16, 'PRP$': 17, 'WDT': 18,
