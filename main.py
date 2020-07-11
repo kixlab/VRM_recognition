@@ -6,7 +6,6 @@ import torch
 import torch.optim as optim
 from torch.optim.lr_scheduler import MultiStepLR
 from torch.utils.data import DataLoader
-from tensorboardX import SummaryWriter
 import os
 import numpy as np
 import pandas as pd
