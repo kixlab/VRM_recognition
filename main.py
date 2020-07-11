@@ -184,9 +184,6 @@ if __name__=='__main__':
     valby_conv = False
     lastpooling = False
 
-    if args.use_conv_val:
-        valby_conv = True
-
     config = vrm_config
     # VRM setting
     builder = build_bilstm_ram
