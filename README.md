@@ -1,6 +1,6 @@
-# AIF-2020
+# VRM_recognition (this repo is for sharing with other labs) 
 
-##### 5th year's product: korean VRM classifier 
+##### 4th year's product: korean VRM classifier 
 
 ##### All dependencies can be found in ```environment.yml```. Thus, first activate your own virtual environment and install the dependencies using ```$ conda env create -f environment.yml```.
 ##### This classifier takes korean sentences as input and outputs the corresponding VRM labels through (1) kor-eng translation module and (2) eng VRM classifier. To run the translation module, visit https://www.ncloud.com/, obtain your own NAVER PAPAGO ID and KEY, and enter the ID and KEY in the following:
