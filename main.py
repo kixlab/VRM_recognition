@@ -211,9 +211,6 @@ if __name__=='__main__':
 
     if args.command =='train':
 
-        if args.resume_point:
-            model.load_state_dict(torch.load(args.resume_point))
-
         dataloader = DataLoader(dataset,batch_size = args.batch_size, num_workers=args.num_workers, shuffle=True)
 
         if args.optim == 'SGD':
