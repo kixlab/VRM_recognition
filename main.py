@@ -159,21 +159,6 @@ def converter(x, y, z):
     return f
 
 
-def get_latest_version(checkpoint_dir,work_id=None):
-
-    ls = os.listdir(checkpoint_dir)
-
-    if work_id:
-        versions = [int(chk.split('_')[-1].split('.')[0]) for chk in ls if chk.startswith(work_id)]
-    else:
-        versions= [int(chk.split('_')[-1].split('.')[0]) for chk in ls]
-
-    version = 0
-    if len(versions) != 0:
-        versions.sort()
-        version = versions[-1]
-    return version
-
 
 if __name__=='__main__':
 
@@ -234,12 +219,10 @@ if __name__=='__main__':
         else:
             scheduler = None
 
-        chk_version = get_latest_version(args.checkpoint_folder,work_id)+1
-        log_version = get_latest_version(args.logdir,work_id)+1
 
-        checkpoint_dir = os.path.join(args.checkpoint_folder,work_id+"_"+str(chk_version))
+        checkpoint_dir = os.path.join(args.checkpoint_folder)
         os.mkdir(checkpoint_dir)
-        log_dir = os.path.join(args.logdir,work_id+"_"+str(log_version))
+        log_dir = os.path.join(args.logdir)
 
         writer = SummaryWriter(log_dir)
 
