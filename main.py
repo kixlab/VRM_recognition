@@ -75,7 +75,6 @@ def train(model,
             criterion,
             optimizer,
             scheduler,
-            writer,
             checkpoint_dir,
             epoch_size,
             log_stride,
@@ -93,7 +92,6 @@ def train(model,
         last_log = 0
 
         current_lr = optimizer.state_dict()['param_groups'][0]['lr']
-        writer.add_scalar("lr/train",current_lr,epoch)
 
         if previous_lr and previous_lr != current_lr:
             model.load_state_dict(best_model_state)
@@ -120,7 +118,6 @@ def train(model,
             if (n+1) % log_stride == 0:
 
                 last_log = (average_loss/log_stride).cpu().item()
-                writer.add_scalar("loss/train", last_log, epoch*len(dataloader)+n)
                 average_loss = 0       
 
 
@@ -132,7 +129,6 @@ def train(model,
 
 
     torch.save(model.state_dict(), os.path.join(checkpoint_dir,"checkpoint_{}.pth".format(epoch_size-1)))
-    writer.close()
 
 
 
@@ -224,8 +220,6 @@ if __name__=='__main__':
         os.mkdir(checkpoint_dir)
         log_dir = os.path.join(args.logdir)
 
-        writer = SummaryWriter(log_dir)
-
         print("start training...")
 
         train(model,
@@ -234,7 +228,6 @@ if __name__=='__main__':
             criterion,
             optimizer,
             scheduler,
-            writer,
             checkpoint_dir=checkpoint_dir,
             epoch_size=args.num_epochs,
             log_stride=args.log_stride,
