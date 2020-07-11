@@ -1,4 +1,4 @@
-name: aif_classifier_test
+name: aif_recognition_test
 channels:
   - conda-forge
   - defaults
@@ -25,7 +25,7 @@ dependencies:
   - numpy=1.18.5=py36ha1c710e_0
   - numpy-base=1.18.5=py36hde5b4d6_0
   - openssl=1.0.2u=h7b6447c_0
-  - pip=19.3.1=py36_0
+  - pip=20.1.1=py36_1
   - pycparser=2.20=py_0
   - python=3.6.1=2
   - pytorch=1.3.1=cuda100py36h53c1284_0
@@ -49,7 +49,9 @@ dependencies:
     - jmespath==0.10.0
     - joblib==0.16.0
     - nltk==3.5
+    - pandas==1.0.5
     - python-dateutil==2.8.1
+    - pytz==2020.1
     - regex==2020.6.8
     - requests==2.24.0
     - s3transfer==0.3.3
@@ -57,5 +59,5 @@ dependencies:
     - smart-open==2.1.0
     - tqdm==4.47.0
     - urllib3==1.25.9
-prefix: /home/jykim3/anaconda3/envs/aif_classifier_test
+prefix: /home/jykim3/anaconda3/envs/aif_recognition_test
 

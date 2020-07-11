@@ -211,7 +211,6 @@ print("done...!")
 # read excel file
 data = {}
 
-#print(kor2eng('안녕하세요'))
 
 #f = open('kor-eng.csv', 'w', encoding='utf-8', newline='')
 #wr = csv.writer(f)
