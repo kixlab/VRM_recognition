@@ -1,7 +1,5 @@
 CURRENT_DIR=$(pwd)
 DATA_PATH="${CURRENT_DIR}/data/vrm_train_data.csv"
-VAL_DATA_PATH="${CURRENT_DIR}/data/vrm_val_data.csv"
-#EMBEDDING_PATH="${CURRENT_DIR}/data/GoogleNews-vectors-negative300.bin"
 EMBEDDING_PATH="${CURRENT_DIR}/data/word2vec_from_glove.bin"
 LOG_DIR="${CURRENT_DIR}/log"
 CHCK_DIR="${CURRENT_DIR}/checkpoint"
@@ -24,9 +22,5 @@ python main.py \
      --log_stride=25 \
      --checkpoint_folder="${CHCK_DIR}" \
      --checkpoint_stride=10 \
-     --validation_epochs=0.066 \
-     --val_data_path="${VAL_DATA_PATH}" \
-     --use_conv_val=1 \
      --gamma=1 \
-     #--resume_point="${RESUME_POINT}" \
 
