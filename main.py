@@ -190,9 +190,6 @@ if __name__=='__main__':
     by_conversation = config.by_conversation
     criterion = ChunkCrossEntropyLoss_VRM(num_chunk= config.chunk_size, weights=config.weights,ignore_index= IGNORE_INDEX)
 
-    if args.testby_conv:
-        by_conversation = True
-
     print("setting model...")
 
     model = builder(DEVICE,config,args.multiplier)
